@@ -3,8 +3,11 @@
 # Please adapt and uncomment the following lines:
 	name = Levente Kurusa
 	email = lkurusa@acm.org
-[gpg]
-	program = /usr/bin/krgpg
+	signingkey = 4EF5D641
+#[gpg]
+	#program = /usr/bin/krgpg
+[core]
+	editor = /usr/bin/nvim
 [commit]
 	gpgSign = true
 [tag]
@@ -26,3 +29,21 @@
 	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 	unassume-all = "!git assumed | xargs git update-index --no-assume-unchanged"
 	assume-all = "!git st -s | awk {'print $2'} | xargs git assume"
+	# GitLab merge request thing
+	mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	# GitHub pull request thing
+	pr  = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+	# Faster rebase
+	rebase-sq = rebase --interactive --autosquash master
+
+[pager]
+	branch = false
+	slog = false
+	grep = false
+[rebase]
+	autosquash = true
+[status]
+	submoduleSummary = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
