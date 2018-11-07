@@ -1,0 +1,29 @@
+#!/bin/sh
+
+VPN_CONFIG_DIR=/etc/openvpn/client
+
+if [[ -z $1 ]]
+then echo "Usage: $0 kill|NY|CA|UK|HU"
+	exit
+fi
+
+if [[ $1 == "NY" ]]
+then LOC=US_New_York_City.conf
+elif [[ $1 == "CA" ]]
+then LOC=US_Silicon_Valley.conf
+elif [[ $1 == "UK" ]]
+then LOC=UK_London.conf
+elif [[ $1 == "HU" ]]
+then LOC=Hungary.conf
+elif [[ $1 == "kill" ]]
+then
+	sudo killall -SIGINT openvpn
+	exit
+else
+	echo "Invalid location given"
+fi
+
+echo Connecting VPN to ${LOC}
+
+sudo openvpn --daemon \
+		--config ${VPN_CONFIG_DIR}/${LOC}
