@@ -232,7 +232,7 @@ map <Down>  :call ToggleScrollOff()<cr>
 map <Left> :call ToggleShowCursor()<cr>
 
 function! Termbin() range
-  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).'| sed -e s/\\\\\$// | curl -F "sprunge=<-" sprunge.us 2>/dev/null | pbcopy')
+  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).'| sed -e s/\\\\\$// | curl -F "sprunge=<-" sprunge.us 2>/dev/null | xclip -selection c')
 endfunction
 
 function! CopyLine() range
