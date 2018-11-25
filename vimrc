@@ -76,10 +76,18 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-eunuch'
+Plugin 'aklt/plantuml-syntax'
+Plugin 'tyru/open-browser.vim' " dependency for next
+Plugin 'weirongxu/plantuml-previewer.vim'
+" Plugin 'scrooloose/vim-slumlord' " Does not work
 " Plugin 'eagletmt/neco-ghc'
 " Plugin 'AndreaMichi/wacc-vim'
 Plugin 'vim-syntastic/syntastic'
 call vundle#end()
+
+" plantuml
+let g:plantuml_previewer#plantuml_jar_path = "/home/lkurusa/sw/plantuml.jar"
+au BufNewFile,BufRead *.uml set filetype=plantuml
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -187,6 +195,7 @@ let g:racer_experimental_completer = 1
 set completeopt-=preview
 let g:rustfmt_command = "/home/lkurusa/.cargo/bin/rustfmt"
 let g:rustfmt_options = "+nightly"
+nnoremap <leader><leader>c :Cbuild<cr>
 
 set t_Co=256
 colorscheme monochrome
@@ -307,3 +316,6 @@ augroup END
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 au BufNewFile,BufRead *.wacc set filetype=wacc
+
+" enable manpage viewer
+runtime ftplugin/Man.vim
