@@ -20,7 +20,7 @@
 [alias]
 	# Log stuff
 	plog = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	slog = log --abbrev-commit --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	slog = log --all --abbrev-commit --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --color=always
 	# Tags...
 	last-tag = describe --tags --abbrev=0
 	# Assume for when someone's IDE is being uncool
@@ -36,6 +36,7 @@
 	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 	# Faster rebase
 	rebase-sq = rebase --interactive --autosquash master
+	co = checkout
 
 [pager]
 	branch = false
@@ -47,3 +48,23 @@
 	submoduleSummary = true
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+	insteadOf = gh:
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = magenta
+    local = white
+    remote = green
+
+[color "diff"]
+    meta = white dim
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
