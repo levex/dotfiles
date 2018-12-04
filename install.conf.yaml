@@ -9,6 +9,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
+    ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
