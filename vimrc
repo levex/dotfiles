@@ -79,6 +79,8 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'tyru/open-browser.vim' " dependency for next
 Plugin 'weirongxu/plantuml-previewer.vim'
+Plugin 'euclio/vim-markdown-composer'
+Plugin 'adborden/vim-notmuch-address'
 " Plugin 'scrooloose/vim-slumlord' " Does not work
 " Plugin 'eagletmt/neco-ghc'
 " Plugin 'AndreaMichi/wacc-vim'
