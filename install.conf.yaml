@@ -11,6 +11,7 @@
     ~/.gitconfig: gitconfig
     ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
     ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
+    ~/bin/ahti-upload-screenshot: bin/ahti-upload-screenshot
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

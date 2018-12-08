@@ -1,0 +1,8 @@
+#!/bin/sh
+
+random_name=$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8)
+
+ls -la ~/screenshots | sort -k 9 -r | head -1 | awk '{ print $9 }' | xargs -I {} scp ~/screenshots/{} lkurusa@ahti.space:~/public_html/images/${random_name}.png 2>&1
+
+echo https://ahti.space/~lkurusa/images/${random_name}.png | xclip -selection c
+echo https://ahti.space/~lkurusa/images/${random_name}.png
