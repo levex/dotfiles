@@ -10,6 +10,7 @@
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
     ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
+    ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
