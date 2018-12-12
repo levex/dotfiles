@@ -101,6 +101,9 @@ let g:syntastic_mode_map = {
 	\ "active_filetypes": ["rust"],
 	\ "passive_filetypes": ["c"] }
 
+nnoremap <silent> <leader>eo :Errors<cr>
+nnoremap <silent> <leader>ec :lclose<cr>
+
 " vim-tmux-navigator
 let g:tmux_navigator_no_mappings = 1
 
