@@ -1,0 +1,36 @@
+[general]
+pythonfile = ~/.offlineimap/offlineimap.py
+accounts = kernelstuff, nanovms
+
+[Account nanovms]
+localrepository = nanovms-local
+remoterepository = nanovms-remote
+
+[Repository nanovms-local]
+type = Maildir
+localfolders = ~/mail-nanovms
+nametrans = lambda folder: {'archive': '[Gmail]/All Mail'}.get(folder, folder)
+
+[Repository nanovms-remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = lkurusa@nanovms.com
+remotepasseval = get_pass("nanovms")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl_version = tls1_2
+
+
+[Account kernelstuff]
+localrepository = kernelstuff-local
+remoterepository = kernelstuff-remote
+
+[Repository kernelstuff-local]
+type = Maildir
+localfolders = ~/mail-kernelstuff
+
+[Repository kernelstuff-remote]
+type = IMAP
+remotehost = imap.zoho.eu
+remoteuser = lkurusa@kernelstuff.org
+remotepasseval = get_pass("kernelstuff")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt

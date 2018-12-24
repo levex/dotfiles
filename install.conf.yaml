@@ -9,6 +9,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
+    ~/.offlineimaprc: offlineimaprc
     ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
     ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
     ~/bin/ahti-upload-screenshot: bin/ahti-upload-screenshot
