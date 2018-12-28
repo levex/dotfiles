@@ -12,6 +12,7 @@
     ~/.offlineimaprc: offlineimaprc
     ~/.offlineimap/offlineimap.py: offlineimap.py
     ~/.msmtprc: msmtprc
+    ~/.bashrc: bashrc
     ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
     ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
     ~/bin/ahti-upload-screenshot: bin/ahti-upload-screenshot
