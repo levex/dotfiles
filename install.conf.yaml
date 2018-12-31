@@ -12,6 +12,7 @@
     ~/.offlineimaprc: offlineimaprc
     ~/.offlineimap/offlineimap.py: offlineimap.py
     ~/.msmtprc: msmtprc
+    ~/.mailcap: mailcap
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
     ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
