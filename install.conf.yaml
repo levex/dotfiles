@@ -18,9 +18,10 @@
     ~/.bash_profile: bash_profile
     ~/.pboy.toml: pboy.toml
     ~/.profile: profilepboy.toml
-    ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
-    ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
     ~/bin/ahti-upload-screenshot: bin/ahti-upload-screenshot
+    ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
+    ~/bin/check-newsboat.sh: bin/check-newsboat.sh
+    ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
     ~/bin/instapaper: bin/instapaper
 
 - shell:
