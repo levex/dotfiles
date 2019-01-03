@@ -1,0 +1,122 @@
+set mbox_type   = Maildir
+set sendmail    = "/usr/bin/msmtp -a default"
+set editor = nvim
+
+set realname = 'Levente Kurusa'
+set from = 'lkurusa@kernelstuff.org'
+set folder      = ~/mail-kernelstuff
+set spoolfile   = "+INBOX"
+set mbox        = "+INBOX"
+set postponed   = "+Drafts"
+unset record
+
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+
+set edit_headers = yes
+ignore *                                      # ignore all headers
+unignore From: To: Cc: Date: Subject:         # show only these
+hdr_order From: To: Cc: Date: Subject:        # and in this order
+
+#macro index,pager \cg "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+#macro attach,compose \cg "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+# autoviews
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+# PGP
+set pgp_default_key="0x4EF5D641"
+set pgp_sign_as="0x4EF5D641"
+set pgp_decode_command="gpg --status-fd=2 %?p?--passphrase-fd 0? --no-verbose --quiet --batch --output - %f"
+set pgp_verify_command="gpg --status-fd=2 --no-verbose --quiet --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --status-fd=2 %?p?--passphrase-fd 0? --no-verbose --quiet --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --quiet --output - %?p?--passphrase-fd 0? --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --quiet --output - %?p?--passphrase-fd 0? --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg %?p?--passphrase-fd 0? --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust -- -r %r -- %f"
+set pgp_import_command="gpg --no-verbose --import %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --quiet --with-colons --with-fingerprint --with-fingerprint --list-keys %r"
+set pgp_list_secring_command="gpg --no-verbose --batch --quiet --with-colons --with-fingerprint --with-fingerprint --list-secret-keys %r"
+set pgp_good_sign="`gettext -d gnupg -s 'Good signature from "' | tr -d '"'`"
+set pgp_check_gpg_decrypt_status_fd
+set pgp_decryption_okay="^\\[GNUPG:\\] DECRYPTION_OKAY"
+
+# colors
+color normal	 color253    color234
+color indicator  color230    color238
+color status     color101    color16
+color tree       color208    color234
+color signature  color102    color234
+color message    color253    color234
+color attachment color117    color234
+color error      color30     color234
+color tilde      color130    color235
+color search     color100    default
+color markers    color138    default
+color quoted     color107    color234
+color quoted1    color66     color234
+color quoted2    color32     color234
+color quoted3    color30     color234
+color quoted4    color99     color234
+color quoted5    color36     color234
+color quoted6    color114    color234
+color quoted7    color109    color234
+color quoted8    color41     color234
+color quoted9    color138    color234
+color index      color202    color234  ~F
+color index      color39     color234  ~N
+color index      color39     color234  ~O
+color index      color229    color22   ~T
+color index      color240    color234  ~D
+color hdrdefault color30     color233
+color header	 color132    color233  '^date:'
+color header	 color153    color233  '^(to|cc|bcc):'
+color header	 color120    color233  '^from:'
+color header	 color178    color233  '^subject:'
+color header     color31     color233  '^user-agent:'
+color header	 color29     color233  '^reply-to:'
+
+# mailboxes
+
+mailboxes +INBOX
+mailboxes =lists.oss-security
+mailboxes =lists.openbsd-misc
+mailboxes =lists.dragonflybsd-users
+mailboxes =lists.rust-vmm
+mailboxes =lists.haskell-education
+mailboxes =openbsd-errata
+mailboxes =hotel_bookings
+mailboxes =Sent
+
+# Sidebar
+set sidebar_visible = no
+set sidebar_width = 30
+set sidebar_short_path = yes
+set sidebar_delim_chars = '/.'
+set sidebar_folder_indent = no
+set sidebar_indent_string = '  '
+set sidebar_new_mail_only = no
+set sidebar_next_new_wrap = no
+set sidebar_divider_char = '|'
+set mail_check_stats
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+set sidebar_sort_method = 'unsorted'
+
+# Sidebar binds
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cb sidebar-toggle-visible
+
+# General binds
+bind index G next-unread
+
+# Sidebar colors
+color sidebar_highlight black color8
+color sidebar_divider color8 black
+color sidebar_flagged red black
+color sidebar_new green black
+
