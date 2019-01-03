@@ -30,6 +30,8 @@
     ~/bin/irssi-fnotify.sh: bin/irssi-fnotify.sh
     ~/bin/lock.sh: bin/lock.sh
     ~/bin/vpn: bin/vpn
+    ~/.config/newsboat/config: config/newsboat/config
+    ~/.config/newsboat/urls: config/newsboat/urls
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

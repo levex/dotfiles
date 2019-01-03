@@ -1,0 +1,56 @@
+# Refresh rules
+auto-reload yes
+refresh-on-startup yes
+reload-time 30
+
+# Settings
+browser firefox
+
+# Article stuff
+article-sort-order date-asc
+goto-next-feed no
+show-read-feeds no
+
+# My Colors
+# color listnormal          default default 
+# color listfocus           black white
+# color listfocus_unread    black white bold
+# color listnormal_unread   white default bold
+# color info                default cyan bold
+# colors
+color background          color229   default
+color listnormal          color229   default
+color listnormal_unread   color229   default
+color listfocus           color229   color61 bold
+color listfocus_unread    color229   color61 bold
+color info                color247   color235
+color article             color15 default
+
+# highlights
+highlight article "^(Feed|Link):.*$" color46 default bold
+highlight article "^(Title|Date|Author):.*$" color39 default bold
+# highlight article "https?://[^ ]+" color46 default underline
+# highlight article "https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" color46 default underline
+highlight article "\\[[0-9]+\\]" color63 default bold
+highlight article "\\[image\\ [0-9]+\\]" color63 default bold
+highlight feedlist "^─.*$" color61 color235 bold
+
+# Keys
+bind-key k up
+bind-key j down
+bind-key q quit
+unbind-key l
+bind-key l open
+bind-key h quit
+bind-key m toggle-show-read-feeds
+unbind-key s
+bind-key s bookmark
+unbind-key O
+unbind-key o
+bind-key o open-in-browser-and-mark-read
+bind-key O open-in-browser
+
+
+# Bookmarking via Instapaper
+bookmark-cmd instapaper
+bookmark-autopilot yes

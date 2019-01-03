@@ -1,0 +1,48 @@
+http://comonad.com/reader/feed/ Haskell
+http://www.haskellforall.com/feeds/posts/default Haskell
+http://blog.sigfpe.com/feeds/posts/default Haskell
+https://www.fpcomplete.com/blog/rss.xml Haskell "~FPComplete Blog"
+http://www.well-typed.com/blog/rss2.xml Haskell
+https://blog.acolyer.org/feed/ Research
+https://www.microsoft.com/en-us/research/feed/ Research
+https://blog.regehr.org/feed Research Compilers
+http://feeds.feedburner.com/DilbertDailyStrip Comics
+http://feeds.feedburner.com/GeekAndPoke Comics
+https://xkcd.com/rss.xml Comics
+http://phdcomics.com/gradfeed.php Comics
+https://golem.ph.utexas.edu/category/atom10.xml Maths
+https://aperiodical.com/feed/ Maths
+https://mathlesstraveled.com/feed/ Maths
+http://feeds.feedburner.com/theendeavour Maths
+http://lambda-the-ultimate.org/rss.xml Research "Programming Languages"
+http://feeds.feedburner.com/ezyang Haskell
+http://feeds.feedburner.com/holman Startups
+https://eev.ee/feeds/blog.atom.xml Startups
+http://feeds.feedburner.com/codinghorror/ Misc
+http://lwn.net/headlines/newrss Linux
+http://www.osnews.com/files/recent.xml "Operating Systems"
+http://muratbuffalo.blogspot.com/feeds/posts/default Research
+https://www.dragonflydigest.com/feed BSD "Operating Systems"
+https://distrowatch.com/news/dw.xml "Operating Systems"
+https://www.anandtech.com/rss/ News
+http://llvmweekly.org/rss.xml Compilers LLVM
+https://readrust.net/all/feed.rss Rust
+https://haskellweekly.news/haskell-weekly.atom Haskell
+https://begriffs.com/atom.xml BSD Misc Haskell
+http://feeds.arstechnica.com/arstechnica/index News
+https://googleprojectzero.blogspot.com/feeds/posts/default Security
+https://www.ralfj.de/blog/feed.xml Rust
+https://this-week-in-rust.org/atom.xml Rust
+https://vermaden.wordpress.com/feed/ BSD  "~Vermaden's blog"
+http://undeadly.org/cgi?action=rss BSD
+https://cfarm.tetaneutral.net/rss/ Misc
+https://blog.plover.com/index.rss Misc
+https://twobithistory.org/feed.xml History
+
+https://www.reddit.com/r/rust/.rss Reddit "~r/rust"
+https://www.reddit.com/r/osdev/.rss Reddit "~r/osdev"
+https://www.reddit.com/r/unixporn/.rss Reddit "~r/unixporn"
+https://www.reddit.com/r/mechanicalkeyboards/.rss Reddit "~r/mechanicalkeyboards"
+https://www.reddit.com/r/archlinux/.rss Reddit "~r/archlinux"
+https://www.reddit.com/r/linux/.rss Reddit "~r/linux"
+https://www.reddit.com/r/programmerhumor/.rss Reddit "~r/programmerhumor"
