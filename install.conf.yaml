@@ -20,6 +20,7 @@
     ~/.profile: profilepboy.toml
     ~/.ripgreprc: ripgreprc
     ~/.Xcompose: Xcompose
+    ~/.Xdefaults: Xdefaults
     ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
     ~/bin/ahti-upload-screenshot: bin/ahti-upload-screenshot
     ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh

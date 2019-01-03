@@ -1,0 +1,264 @@
+! Source Sans
+!URxvt*font: xft:Source Code Pro for Powerline:size=12, xft:DejaVu Sans:pixelsize=18
+URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true
+URxvt*boldFont: xft:Source Code Pro for Powerline:bold:size=12, xft:DejaVu Sans:pixelsize=18
+URxvt*italicFont: xft:Source Code Pro for Powerline:italic:size=12, xft:DejaVu Sans:pixelsize=18
+URxvt*boldItalicFont: xft:Source Code Pro for Powerline:bolditalic:size=12, xft:DejaVu Sans:pixelsize=18
+
+!
+! Inconsolata
+!
+!URxvt*font: xft:Inconsolata\ for\ Powerline:pixelsize=13:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true
+!URxvt*boldItalicFont: xft:Inconsolata\ for\ Powerline:bolditalic:size=12, xft:DejaVu Sans:pixelsize=18
+!URxvt*boldFont: xft:Inconsolata\ for\ Powerline:bold:size=12, xft:DejaVu Sans:pixelsize=18
+!URxvt*italicFont: xft:Inconsolata\ for\ Powerline:italic:size=12, xft:DejaVu Sans:pixelsize=18
+
+! Look and Feel
+URxvt*iconFile: /usr/share/icons/Numix-Circle/48/apps/terminal.svg
+URxvt*iconName: terminal
+URxvt*visualBell: false
+URxvt*depth: 32
+URxvt*scrollBar: false
+
+*.foreground:   #ffffff
+*.background:   [85]#1b1918
+*.cursorColor:  #ffffff
+
+*.color0:       #1b1918
+*.color1:       #f22c40
+*.color2:       #5ab738
+*.color3:       #d5911a
+*.color4:       #407ee7
+*.color5:       #6666ea
+*.color6:       #00ad9c
+*.color7:       #a8a19f
+*.color8:       #766e6b
+*.color9:       #f22c40
+*.color10:      #5ab738
+*.color11:      #d5911a
+*.color12:      #407ee7
+*.color13:      #6666ea
+*.color14:      #00ad9c
+*.color15:      #f1efee
+*.color16:      #df5320
+*.color17:      #c33ff3
+*.color18:      #2c2421
+*.color19:      #68615e
+*.color20:      #9c9491
+*.color21:      #e6e2e0
+
+! What the fuck.
+URxvt*iso14755: false
+URxvt*iso14755_52: false
+
+! Plugins: URL Matcher, Clipboard, Tabs, Scrollwheel
+URxvt*perl-ext-common: default,matcher,resize-font,clipboard,tabbedex,vtwheel
+URxvt*modifier: alt
+URxvt*url-launcher: /usr/bin/palemoon
+URxvt*matcher.button: 1
+#URxvt*keysym.Shift-Control-C: perl:clipboard:copy
+#URxvt*keysym.Shift-Control-V: perl:clipboard:paste
+URxvt*tabbed.autohide: true
+! URxvt*keysym.Control-t: perl:tabbedex:new_tab
+!URxvt*keysym.Control-Tab: perl:tabbedex:next_tab
+!URxvt*keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
+!URxvt*keysym.Control-Shift-Left: perl:tabbedex:move_tab_left
+!URxvt*keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: true
+URxvt.keysym.Control-M-u:           perl:url-select:select_next
+URxvt.keysym.Control-M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.Control-M-s:           perl:keyboard-select:search
+URxvt.keysym.Control-M-Down:  resize-font:smaller
+URxvt.keysym.Control-M-Up:    resize-font:bigger
+URxvt.keysym.Control-M-Home:    resize-font:reset
+URxvt.keysym.Control-M-End:  resize-font:show
+
+
+! Xft Font Configuration
+Xft.dpi: 82
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: false
+Xft.hintstyle: hintnone
+
+Xcursor.theme: OpenZone_Black_Slim
+
+! Vim stuff
+
+! ! emulate XTerm for proper recognition of key combinations in Vim
+! !URxvt.keysym.Up              : \033[A  !breaks arrow keys in Vim
+! !URxvt.keysym.Down            : \033[B  !breaks arrow keys in Vim
+! !URxvt.keysym.Right           : \033[C  !breaks arrow keys in Vim
+! !URxvt.keysym.Left            : \033[D  !breaks arrow keys in Vim
+! !URxvt.keysym.Page_Up         : \033[5~ !breaks scrolling in Rxvt
+! !URxvt.keysym.Page_Down       : \033[6~ !breaks scrolling in Rxvt
+! !URxvt.keysym.Home            : \033[H  !breaks navigation in Vim
+! !URxvt.keysym.End             : \033[F  !breaks navigation in Vim
+! URxvt.keysym.S-Up             : \033[1;2A
+! URxvt.keysym.S-Down           : \033[1;2B
+! URxvt.keysym.S-Right          : \033[1;2C
+! URxvt.keysym.S-Left           : \033[1;2D
+! !URxvt.keysym.S-Page_Up       : captured by terminal for scrolling
+! !URxvt.keysym.S-Page_Down     : captured by terminal for scrolling
+! URxvt.keysym.S-Home           : \033[1;2H
+! URxvt.keysym.S-End            : \033[1;2F
+! URxvt.keysym.M-H              : M-CM-(
+! URxvt.keysym.M-Up             : \033[1;3A
+! URxvt.keysym.M-Down           : \033[1;3B
+! URxvt.keysym.M-Right          : \033[1;3C
+! URxvt.keysym.M-Left           : \033[1;3D
+! URxvt.keysym.M-Page_Up        : \033[5;3~
+! URxvt.keysym.M-Page_Down      : \033[6;3~
+! URxvt.keysym.M-Home           : \033[1;3H
+! URxvt.keysym.M-End            : \033[1;3F
+! URxvt.keysym.M-S-Up           : \033[1;4A
+! URxvt.keysym.M-S-Down         : \033[1;4B
+! URxvt.keysym.M-S-Right        : \033[1;4C
+! URxvt.keysym.M-S-Left         : \033[1;4D
+! !URxvt.keysym.M-S-Page_Up     : seen as Rxvt.keysym.S-Page_Up
+! !URxvt.keysym.M-S-Page_Down   : seen as Rxvt.keysym.S-Page_Down
+! URxvt.keysym.M-S-Home         : \033[1;4H
+! URxvt.keysym.M-S-End          : \033[1;4F
+! URxvt.keysym.C-Up             : \033[1;5A
+! URxvt.keysym.C-Down           : \033[1;5B
+! URxvt.keysym.C-Right          : \033[1;5C
+! URxvt.keysym.C-Left           : \033[1;5D
+! URxvt.keysym.C-Page_Up        : \033[5;5~
+! URxvt.keysym.C-Page_Down      : \033[6;5~
+! URxvt.keysym.C-Home           : \033[1;5H
+! URxvt.keysym.C-End            : \033[1;5F
+! URxvt.keysym.C-S-Up           : \033[1;6A
+! URxvt.keysym.C-S-Down         : \033[1;6B
+! URxvt.keysym.C-S-Right        : \033[1;6C
+! URxvt.keysym.C-S-Left         : \033[1;6D
+! !URxvt.keysym.C-S-Page_Up     : seen as Rxvt.keysym.S-Page_Up
+! !URxvt.keysym.C-S-Page_Down   : seen as Rxvt.keysym.S-Page_Down
+! URxvt.keysym.C-S-Home         : \033[1;6H
+! URxvt.keysym.C-S-End          : \033[1;6F
+! URxvt.keysym.M-C-Up           : \033[1;7A
+! URxvt.keysym.M-C-Down         : \033[1;7B
+! URxvt.keysym.M-C-Right        : \033[1;7C
+! URxvt.keysym.M-C-Left         : \033[1;7D
+! URxvt.keysym.M-C-Page_Up      : \033[5;7~
+! URxvt.keysym.M-C-Page_Down    : \033[6;7~
+! URxvt.keysym.M-C-Home         : \033[1;7H
+! URxvt.keysym.M-C-End          : \033[1;7F
+! URxvt.keysym.M-C-S-Up         : \033[1;8A
+! URxvt.keysym.M-C-S-Down       : \033[1;8B
+! URxvt.keysym.M-C-S-Right      : \033[1;8C
+! URxvt.keysym.M-C-S-Left       : \033[1;8D
+! !URxvt.keysym.M-C-S-Page_Up   : seen as Rxvt.keysym.S-Page_Up
+! !URxvt.keysym.M-C-S-Page_Down : seen as Rxvt.keysym.S-Page_Down
+! URxvt.keysym.M-C-S-Home       : \033[1;8H
+! URxvt.keysym.M-C-S-End        : \033[1;8F
+! 
+! 
+! ! Extra mappings
+! 
+! urxvt*keysym.Meta-0X0020: \302\240
+! urxvt*keysym.Meta-0X0021: \302\241
+! urxvt*keysym.Meta-0X0022: \302\242
+! urxvt*keysym.Meta-0X0023: \302\243
+! urxvt*keysym.Meta-0X0024: \302\244
+! urxvt*keysym.Meta-0X0025: \302\245
+! urxvt*keysym.Meta-0X0026: \302\246
+! urxvt*keysym.Meta-0X0027: \302\247
+! urxvt*keysym.Meta-0X0028: \302\250
+! urxvt*keysym.Meta-0X0029: \302\251
+! urxvt*keysym.Meta-0X002A: \302\252
+! urxvt*keysym.Meta-0X002B: \302\253
+! urxvt*keysym.Meta-0X002C: \302\254
+! urxvt*keysym.Meta-0X002D: \302\255
+! urxvt*keysym.Meta-0X002E: \302\256
+! urxvt*keysym.Meta-0X002F: \302\257
+! urxvt*keysym.Meta-0X0030: \302\260
+! urxvt*keysym.Meta-0X0031: \302\261
+! urxvt*keysym.Meta-0X0032: \302\262
+! urxvt*keysym.Meta-0X0033: \302\263
+! urxvt*keysym.Meta-0X0034: \302\264
+! urxvt*keysym.Meta-0X0035: \302\265
+! urxvt*keysym.Meta-0X0036: \302\266
+! urxvt*keysym.Meta-0X0037: \302\267
+! urxvt*keysym.Meta-0X0038: \302\270
+! urxvt*keysym.Meta-0X0039: \302\271
+! urxvt*keysym.Meta-0X003A: \302\272
+! urxvt*keysym.Meta-0X003B: \302\273
+! urxvt*keysym.Meta-0X003C: \302\274
+! urxvt*keysym.Meta-0X003D: \302\275
+! urxvt*keysym.Meta-0X003E: \302\276
+! urxvt*keysym.Meta-0X003F: \302\277
+! urxvt*keysym.Meta-0X0040: \303\200
+! urxvt*keysym.Meta-0X0041: \303\201
+! urxvt*keysym.Meta-0X0042: \303\202
+! urxvt*keysym.Meta-0X0043: \303\203
+! urxvt*keysym.Meta-0X0044: \303\204
+! urxvt*keysym.Meta-0X0045: \303\205
+! urxvt*keysym.Meta-0X0046: \303\206
+! urxvt*keysym.Meta-0X0047: \303\207
+! urxvt*keysym.Meta-0X0048: \303\210
+! urxvt*keysym.Meta-0X0049: \303\211
+! urxvt*keysym.Meta-0X004A: \303\212
+! urxvt*keysym.Meta-0X004B: \303\213
+! urxvt*keysym.Meta-0X004C: \303\214
+! urxvt*keysym.Meta-0X004D: \303\215
+! urxvt*keysym.Meta-0X004E: \303\216
+! urxvt*keysym.Meta-0X004F: \303\217
+! urxvt*keysym.Meta-0X0050: \303\220
+! urxvt*keysym.Meta-0X0051: \303\221
+! urxvt*keysym.Meta-0X0052: \303\222
+! urxvt*keysym.Meta-0X0053: \303\223
+! urxvt*keysym.Meta-0X0054: \303\224
+! urxvt*keysym.Meta-0X0055: \303\225
+! urxvt*keysym.Meta-0X0056: \303\226
+! urxvt*keysym.Meta-0X0057: \303\227
+! urxvt*keysym.Meta-0X0058: \303\230
+! urxvt*keysym.Meta-0X0059: \303\231
+! urxvt*keysym.Meta-0X005A: \303\232
+! urxvt*keysym.Meta-0X005B: \303\233
+! urxvt*keysym.Meta-0X005C: \303\234
+! urxvt*keysym.Meta-0X005D: \303\235
+! urxvt*keysym.Meta-0X005E: \303\236
+! urxvt*keysym.Meta-0X005F: \303\237
+! urxvt*keysym.Meta-0X0060: \303\240
+! urxvt*keysym.Meta-0X0061: \303\241
+! urxvt*keysym.Meta-0X0062: \303\242
+! urxvt*keysym.Meta-0X0063: \303\243
+! urxvt*keysym.Meta-0X0064: \303\244
+! urxvt*keysym.Meta-0X0065: \303\245
+! urxvt*keysym.Meta-0X0066: \303\246
+! urxvt*keysym.Meta-0X0067: \303\247
+! urxvt*keysym.Meta-0X0068: \303\250
+! urxvt*keysym.Meta-0X0069: \303\251
+! urxvt*keysym.Meta-0X006A: \303\252
+! urxvt*keysym.Meta-0X006B: \303\253
+! urxvt*keysym.Meta-0X006C: \303\254
+! urxvt*keysym.Meta-0X006D: \303\255
+! urxvt*keysym.Meta-0X006E: \303\256
+! urxvt*keysym.Meta-0X006F: \303\257
+! urxvt*keysym.Meta-0X0070: \303\260
+! urxvt*keysym.Meta-0X0071: \303\261
+! urxvt*keysym.Meta-0X0072: \303\262
+! urxvt*keysym.Meta-0X0073: \303\263
+! urxvt*keysym.Meta-0X0074: \303\264
+! urxvt*keysym.Meta-0X0075: \303\265
+! urxvt*keysym.Meta-0X0076: \303\266
+! urxvt*keysym.Meta-0X0077: \303\267
+! urxvt*keysym.Meta-0X0078: \303\270
+! urxvt*keysym.Meta-0X0079: \303\271
+! urxvt*keysym.Meta-0X007A: \303\272
+! urxvt*keysym.Meta-0X007B: \303\273
+! urxvt*keysym.Meta-0X007C: \303\274
+! urxvt*keysym.Meta-0X007D: \303\275
+! urxvt*keysym.Meta-0X007E: \303\276
+! urxvt*keysym.Meta-0X007F: \303\277
+
+! tmux crap
+! URxvt*meta8: true
+! URxvt*metaSendsEscape:    true
+! URxvt*modifier: alt
