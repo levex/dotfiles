@@ -18,11 +18,14 @@
     ~/.bash_profile: bash_profile
     ~/.pboy.toml: pboy.toml
     ~/.profile: profilepboy.toml
+    ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
     ~/bin/ahti-upload-screenshot: bin/ahti-upload-screenshot
     ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
     ~/bin/check-newsboat.sh: bin/check-newsboat.sh
-    ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
     ~/bin/instapaper: bin/instapaper
+    ~/bin/irssi-fnotify.sh: bin/irssi-fnotify.sh
+    ~/bin/lock.sh: bin/lock.sh
+    ~/bin/vpn: bin/vpn
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
