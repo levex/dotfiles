@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ricepaper -u "lkurusa@acm.org" -p `pass web/instapaper.com` "$1" > /dev/null &

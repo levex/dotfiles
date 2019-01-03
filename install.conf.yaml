@@ -17,10 +17,11 @@
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
     ~/.pboy.toml: pboy.toml
-    ~/.profile: profile
+    ~/.profile: profilepboy.toml
     ~/bin/caps-lock-as-esc.sh: bin/caps-lock-as-esc.sh
     ~/bin/20-20-20-rule.sh: bin/20-20-20-rule.sh
     ~/bin/ahti-upload-screenshot: bin/ahti-upload-screenshot
+    ~/bin/instapaper: bin/instapaper
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
