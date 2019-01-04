@@ -39,6 +39,9 @@
     ~/.config/awesome/lain: config/awesome/lain
     ~/.config/awesome/themes: config/awesome/themes
     ~/.config/awesome/wallpaper.jpeg: config/awesome/wallpaper.jpeg
+    ~/.config/fish/config.fish: config/fish/config.fish
+    ~/.config/fish/fishfile: config/fish/fishfile
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish, Installing fisher for fish shell]
