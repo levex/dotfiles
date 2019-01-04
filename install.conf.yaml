@@ -32,6 +32,13 @@
     ~/bin/vpn: bin/vpn
     ~/.config/newsboat/config: config/newsboat/config
     ~/.config/newsboat/urls: config/newsboat/urls
+    ~/.config/awesome/rc.lua: config/awesome/rc.lua
+    ~/.config/awesome/freedesktop: config/awesome/freedesktop
+    ~/.config/awesome/awesome-copycats: config/awesome/awesome-copycats
+    ~/.config/awesome/awesome-wm-widgets: config/awesome/awesome-wm-widgets
+    ~/.config/awesome/lain: config/awesome/lain
+    ~/.config/awesome/themes: config/awesome/themes
+    ~/.config/awesome/wallpaper.jpeg: config/awesome/wallpaper.jpeg
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
